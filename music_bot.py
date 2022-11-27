@@ -6,7 +6,17 @@ import youtube_dl
 import time
 
 # Discord bot Initialization
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
+
+
+default_prefix = "f!"
+
+
+
+
+client = commands.Bot(command_prefix= default_prefix, intents=intents)
 key = "YOUR BOT TOKEN IN HERE"
 
 voice_clients = {}
